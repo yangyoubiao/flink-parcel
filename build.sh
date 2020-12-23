@@ -7,6 +7,7 @@ FLINK_URL=`sed '/^FLINK_URL=/!d;s/.*=//' flink-parcel.properties`
 FLINK_VERSION=`sed '/^FLINK_VERSION=/!d;s/.*=//' flink-parcel.properties`
 EXTENS_VERSION=`sed '/^EXTENS_VERSION=/!d;s/.*=//' flink-parcel.properties`
 OS_VERSION=`sed '/^OS_VERSION=/!d;s/.*=//' flink-parcel.properties`
+OS_NAME=`sed '/^OS_NAME=/!d;s/.*=//' flink-parcel.properties`
 CDH_MIN_FULL=`sed '/^CDH_MIN_FULL=/!d;s/.*=//' flink-parcel.properties`
 CDH_MIN=`sed '/^CDH_MIN=/!d;s/.*=//' flink-parcel.properties`
 CDH_MAX_FULL=`sed '/^CDH_MAX_FULL=/!d;s/.*=//' flink-parcel.properties`
@@ -18,7 +19,7 @@ flink_archive="$( basename $FLINK_URL )"
 flink_unzip_folder="${flink_service_name_lower}-${FLINK_VERSION}"
 flink_folder_lower="$( basename $flink_archive .tgz )"
 flink_parcel_folder="$( echo $flink_folder_lower | tr '[:lower:]' '[:upper:]')"
-flink_parcel_name="$flink_parcel_folder-el${OS_VERSION}.parcel"
+flink_parcel_name="$flink_parcel_folder-${OS_NAME}${OS_VERSION}.parcel"
 flink_built_folder="${flink_parcel_folder}_build"
 flink_csd_build_folder="flink_csd_build"
 
