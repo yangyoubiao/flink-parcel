@@ -14,13 +14,13 @@ CDH除了能够管理自生所提供的一些大数据相关服务外，还允�
 
 文件名称格式为三段，第一段是包名，第二段是版本号，第三段是运行平台。
 
-例如：FLINK-1.9.1-bin-scala_2.12-el7.parcel
+例如：FLINK-1.10.2-bin-scala_2.12-sles12.parcel
 
 **包名**：FLINK
 
-**版本号**：1.9.1-bin-scala_2.12
+**版本号**：1.10.2-bin-scala_2.12
 
-**运行环境**：el7
+**运行环境**：sles12
 
 el6是代表centos6系统，centos7则用el7表示
 
@@ -37,22 +37,22 @@ csd的jar包必须置于/opt/cloudera/csd/目录才可以在添加集群服务�
 
 ## flink-parcel制作过程
 
-以CDH5.14、FLINK1.9.1为例
+以CDP7.1.4、FLINK1.10.2为例
 
 (1)**下载制作包**
 
 ```
-git clone https://github.com/pkeropen/flink-parcel.git
+git clone https://github.com/surpass/flink-parcel.git
 ```
 (2)**修改配置文件**　flink-parcel.properties
 
 
 ```
 #FLINK 下载地址
-FLINK_URL=https://mirrors.tuna.tsinghua.edu.cn/apache/flink/flink-1.9.1/flink-1.9.1-bin-scala_2.12.tgz
+FLINK_URL=https://archive.apache.org/dist/flink/flink-1.10.2/flink-1.10.2-bin-scala_2.11.tgz
 
 #flink版本号
-FLINK_VERSION=1.9.1
+FLINK_VERSION=1.10.2
 
 #扩展版本号
 EXTENS_VERSION=BIN-SCALA_2.12
@@ -61,12 +61,12 @@ EXTENS_VERSION=BIN-SCALA_2.12
 OS_VERSION=7
 
 #CDH 小版本
-CDH_MIN_FULL=5.2
-CDH_MAX_FULL=5.15
+CDH_MIN_FULL=7.0
+CDH_MAX_FULL=7.2
 
 #CDH大版本
-CDH_MIN=5
-CDH_MAX=5
+CDH_MIN=7
+CDH_MAX=7
 
 ```
 
