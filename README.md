@@ -1,4 +1,7 @@
+
 ## 声明
+ps：
+本parcel是fork下 https://github.com/gaozhangmin/flink-parcel 来修改，感谢作者的贡献 20210105
 本parcel是fork下 https://github.com/gaozhangmin/flink-parcel 来修改，感谢作者的贡献，由于本人是基于CDP7.1.4下操作，并修改部分内容，亲测可以集成到CDP中运作。
 
 ## 导读
